@@ -1,0 +1,36 @@
+.gridlayout {
+    display: grid;
+    grid-template-areas: "head head" "menu main" "foot foot";
+    border: 4px solid #565;
+    grid-column-gap: 100px;
+    grid-row-gap: 10px;
+    justify-caja: stretch;
+    align-items: center;
+    justify-content: stretch;
+    align-content: stretch;
+}
+
+.parce height: 40px;
+grid-area: head;
+background: blue;
+border: 2px solid black;
+
+}
+.loco {
+    height: 30px;
+    grid-area: menu;
+    background: red;
+    border: 2px solid black;
+}
+.compa {
+    height: 20px;
+    grid-area: foot;
+    background: purple;
+    border: 2px solid black;
+}
+.pana {
+    height: 10px;
+    grid-area: foot;
+    background: orange;
+    border: 2px solid black;
+}
