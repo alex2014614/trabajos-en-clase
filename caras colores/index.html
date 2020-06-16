@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Caras</title>
+
+</head>
+
+<body>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
+
+</body>
+
+<div class="circulo">
+    <div class="ojo" onclick="gojo(event)"></div>
+    <div class="ojo1" onclick="gojo(event)"></div>
+    <div class="nariz" onclick="gnariz(event)"></div>
+    <div class="boca" onclick="giro(event)"></div>
+</div>
+<div class="cuadrado">
+    <div class="ojo12" onclick="gojo2(event)"></div>
+    <div class="ojo22" onclick="gojo2(event)"></div>
+    <div class="nariz2" onclick="gnariz2(event)"></div>
+    <div class="boca2" onclick="giro2(event)"></div>
+</div>
+
+<div class="circulo2">
+    <div class="ojo3"></div>
+    <div class="ojo4"></div>
+    <div class="nariz3"> </div>
+    <div class="boca3"> </div>
+</div>
+</body>
+<style>
+    /*PRIMERA FIGURA*/
+    
+    .circulo {
+        width: 200px;
+        height: 200px;
+        border-radius: 60%;
+        background-color: rgb(92, 160, 243);
+        position: absolute;
+    }
+    
+    .ojo {
+        background-color: rgb(236, 203, 53);
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        top: 50px;
+        left: 50px;
+        position: absolute;
+    }
+    
+    .ojo1 {
+        background-color: rgb(236, 203, 53);
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        top: 50px;
+        left: 130px;
+        position: absolute;
+    }
+    
+    .nariz {
+        top: 50px;
+        left: 70px;
+        width: 0;
+        height: 0;
+        border-right: 30px solid transparent;
+        border-top: 30px solid transparent;
+        border-left: 30px solid transparent;
+        border-bottom: 30px solid rgb(74, 172, 17);
+        position: absolute;
+    }
+    
+    .gnariz {
+        transform: rotate(180deg);
+        top: 90px;
+        transition: 1s;
+    }
+    
+    .boca {
+        background: rgb(240, 6, 6);
+        top: 130px;
+        left: 60px;
+        width: 80px;
+        height: 50px;
+        border-radius: 100px 100px 0px 0px;
+        position: absolute;
+    }
+    
+    .bocc {
+        border-radius: 0px 0px 100px 100px;
+        transition: 1s;
+    }
+    
+    .gojo {
+        border-radius: 0%;
+        transition: 1s;
+    }
+    /*SEGUNDA FIGURA*/
+    
+    .cuadrado {
+        position: absolute;
+        width: 200px;
+        height: 200px;
+        border-radius: 0%;
+        background-color: rgb(240, 33, 222);
+        left: 400px;
+    }
+    
+    .ojo12 {
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        border-radius: 0px 0px 50px 50px;
+        background-color: rgb(33, 240, 205);
+        top: 30px;
+        left: 30px;
+    }
+    
+    .ojo22 {
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        border-radius: 0px 0px 50px 50px;
+        background-color: rgb(33, 240, 205);
+        top: 30px;
+        left: 120px;
+    }
+    
+    .gojo2 {
+        border-radius: 50%;
+        transition: 1s;
+    }
+    
+    .nariz2 {
+        position: absolute;
+        top: 90px;
+        left: 70px;
+        width: 0;
+        height: 0;
+        border-right: 30px solid transparent;
+        border-top: 30px solid rgb(10, 4, 2);
+        border-left: 30px solid transparent;
+        border-bottom: 30px solid transparent;
+    }
+    
+    .gnariz2 {
+        transform: rotate(180deg);
+        top: 30px;
+        transition: 1s;
+    }
+    
+    .boca2 {
+        position: absolute;
+        top: 140px;
+        left: 50px;
+        width: 100px;
+        height: 50px;
+        background: rgb(25, 5, 58);
+        border-radius: 0px 0px 100px 100px;
+    }
+    
+    .bocc2 {
+        border-radius: 100px 100px 0px 0px;
+        transition: 1s;
+    }
+</style>
+<script>
+    let variable = 0;
+
+    function giro(event) {
+        console.log('event: ', event)
+        variable++;
+        const div = event.target;
+        div.classList.add('circle');
+        div.classList.toggle('bocc');
+        div.style.zIndex = variable;
+    }
+
+    function gnariz(event) {
+        console.log('event', event)
+        variable++;
+        const div = event.target;
+        div.classList.toggle('gnariz');
+        div.style.zIndex = variable;
+    }
+
+    function gojo(event) {
+        console.log('event', event)
+        variable++;
+        const div = event.target;
+        div.classList.toggle('gojo');
+        div.style.zIndex = variable;
+    }
+
+    function giro2(event) {
+        console.log('event: ', event)
+        variable++;
+        const div = event.target;
+
+        div.classList.toggle('bocc2');
+        div.style.zIndex = variable;
+    }
+
+    function gnariz2(event) {
+        console.log('event', event)
+        variable++;
+        const div = event.target;
+        div.classList.toggle('gnariz2');
+        div.style.zIndex = variable;
+    }
+
+    function gojo2(event) {
+        console.log('event', event)
+        variable++;
+        const div = event.target;
+        div.classList.toggle('gojo2');
+        div.style.zIndex = variable;
+    }
+</script>
+
+
+</html>

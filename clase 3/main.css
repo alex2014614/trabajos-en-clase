@@ -1,0 +1,28 @@
+.circulo {
+    background-color: yellow;
+    border-radius: 50%;
+    height: 100px;
+    width: 100px;
+}
+
+.cuadrado {
+    background-color: blue;
+    border-radius: 0%;
+    height: 100px;
+    width: 100px;
+}
+
+.bordeado {
+    background-color: red;
+    border-radius: 10%;
+    height: 100px;
+    width: 100px;
+}
+
+.orange {
+    background-color: violet;
+    height: 100px;
+    width: 100px;
+    margin: 1px;
+    display: inline-block;
+}
